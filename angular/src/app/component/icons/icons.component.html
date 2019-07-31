@@ -1,0 +1,53 @@
+<div style="margin-top: -15px;margin-bottom: 5px;">
+  <mat-chip-list>
+  <mat-chip style="size: 10px" class="chip" *ngFor="let labels of noteLabel">
+  {{labels.labelName}}
+  <mat-icon matChipRemove style="font-size: 15px" (click)="onDeleteLabelFromNote(label)">close</mat-icon>
+  </mat-chip>
+  </mat-chip-list>
+  </div>
+<div class="example-button-row" style="display:flex" fxLayoutGap="25px">
+  <div>
+    <mat-icon matTooltip="Remind me" >add_alert</mat-icon>
+  </div> 
+  <div>
+    <mat-icon matTooltip="Add people" >person_add</mat-icon>
+  </div> 
+  <div>
+    <mat-icon matTooltip="Add color" >palette</mat-icon>
+  </div>
+  <div>
+    <mat-icon matTooltip="Add image" >image_outline</mat-icon>
+  </div> 
+  <div>
+    <mat-icon matTooltip="Archive" (click)="onArchive()">archive_outline</mat-icon>
+  </div> 
+  <div>
+    <mat-icon matTooltip="More" [matMenuTriggerFor]="more_option">more_vert</mat-icon>
+  </div>
+  <!-- <div>
+    <mat-icon matTooltip="undo" >undo</mat-icon>
+  </div>
+  <div>
+    <mat-icon matTooltip="redu" style="margin-right: 45px;">redo</mat-icon>
+  </div> -->
+  </div>
+  <div>
+
+    <div>
+      
+      <mat-menu #more_option="matMenu">
+        <div>
+        <button mat-button (click)="onDelete()">Delete</button>
+      </div>
+      <div>
+        <button mat-menu-item  [matMenuTriggerFor]="addLabel">AddLabel</button>
+      </div>
+      </mat-menu>
+    </div>
+    <mat-menu #addLabel="matMenu">
+        <div *ngFor="let label of labels" fxLayout="column" fxLayouGap="20px">
+          <mat-checkbox (click)="addLabelToNote(label)">{{label.labelName}}</mat-checkbox>   
+        </div>
+    </mat-menu>
+  </div>

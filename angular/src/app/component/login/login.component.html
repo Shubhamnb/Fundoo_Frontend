@@ -1,0 +1,40 @@
+<div class="main" fxLayout="column" fxLayoutAlign="center center"  >
+  <div  class="register">
+      <mat-card class="mat-card">
+              <div class="fundooNote" fxLayoutAlign="center center">
+                  <h2>FundooNotes</h2>
+              </div>
+              <div class="register" fxLayoutAlign="center center">
+                  <h3>Login</h3>
+               </div>
+               <form  [formGroup]="loginForm">
+              
+                <div fxLayout="column" fxLayoutAlign="center center">      
+                   
+                  <mat-form-field id="email" appearance="outline">
+                          <mat-label>email</mat-label>
+                          <input matInput placeholder="email" formControlName="email" [(ngModel)]="loginuser.email"> 
+                        </mat-form-field>
+              
+                 
+                  <mat-form-field id="passWord" appearance="outline">
+                          <mat-label>password</mat-label>
+                          <input type = "password" matInput placeholder="password" [type]="hide?'text':'password'" formControlName="passWord" [(ngModel)]="loginuser.passWord">
+                          <mat-icon matSuffix (click)="hide=!hide">{{hide?'visibility_off':'visibility'}}</mat-icon>
+                        </mat-form-field>
+              </div>
+                  <div class = "space-between-button">
+                      <div class="example-button-row"> 
+                          <button mat-raised-button color="primary" (click)="login()">Login</button>
+                          <button mat-raised-button color="primary" (click)="forget()">Forget</button>
+                      </div>
+                       
+                  </div>
+                </form>    
+                  <!-- <div class="buttonRegister">
+                      <button mat-raised-button color="primary"  (click)="register()">Register</button>
+                    </div> -->
+          
+      </mat-card>
+  </div>
+</div>

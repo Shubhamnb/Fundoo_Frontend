@@ -1,0 +1,27 @@
+<div class="main" fxLayout="column" fxLayoutAlign="center center"  >
+  <div  class="register">
+      <mat-card class="mat-card">
+              <div class="fundooNote" fxLayoutAlign="center center">
+                  <h2>FundooNotes</h2>
+              </div>
+              <div class="register" fxLayoutAlign="center center">
+                  <h3>Forget</h3>
+               </div>
+           <form fxLayoutAlign="center center" [formGroup]="forgetForm">
+            <div fxLayout="column" fxLayoutAlign="center center">
+            <div>      
+                  <mat-form-field id="email" appearance="outline">
+                          <mat-label>email</mat-label>
+                          <input matInput placeholder="email" formControlName="email" [(ngModel)]="email"> 
+                        </mat-form-field>
+              </div>
+                  <div class = "space-between-button">
+                      <div class="example-button-row"> 
+                          <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+                      </div>    
+                  </div>
+            </div>
+                </form>
+      </mat-card>
+  </div>
+</div>

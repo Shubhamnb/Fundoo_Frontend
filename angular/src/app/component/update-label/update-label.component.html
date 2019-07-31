@@ -1,0 +1,12 @@
+<h3>Update Labels</h3>
+<div fxLayout="column" fxLayoutAlign="center center">
+<mat-form-field>
+<input matInput placeholder="Enter labelName" [formControl]=labelName [(ngModel)]="label.labelName">
+</mat-form-field>
+
+<div class="close">
+<button mat-raised-button (click)="onClose()">
+close
+</button>
+</div>
+</div>

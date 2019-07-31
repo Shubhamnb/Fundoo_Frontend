@@ -1,0 +1,29 @@
+<div class="asfea" fxLayout="column" fxLayoutAlign="center center" fxFlex="100" class="2">
+    <div fxLayout="column" fxFlex="80">
+      <div fxLayout="row wrap" fxLayoutGap="15px" fxLayoutAlign="center">
+       
+      <div *ngFor="let note of notes" >
+    <div *ngIf="note.archive == true">
+    <mat-card class="matcard2">
+      <form>
+      <div class="noteArea" >
+       <div (click)="onUpdateDailog(note)">
+          <div>
+          {{note.noteTitle}}
+         </div>
+    
+          <div>
+              {{note.discription}}
+          </div>
+        </div>
+          <div style="margin-top: 25px;">
+            <app-icons [noteInfo]=note></app-icons>
+          </div>
+       </div>
+       </form>
+    </mat-card>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

@@ -1,0 +1,29 @@
+<div class="updateNote" >
+  <div fxLayout="center center">
+  <!-- <mat-card class="matpad3" > -->
+    <div>
+    <div>
+    <div  style="display: flex; flex-direction: row; justify-content: space-between;" >               
+      <textarea style="border-width: inherit; width: -webkit-fill-available; margin-top: 12px;" matTextareaAutosize [formControl]="title"></textarea>
+    </div>
+    <div  style="display: flex; flex-direction: row; justify-content: space-between;" >               
+      <textarea style="border-width: inherit; width: -webkit-fill-available; margin-top: 12px;" matTextareaAutosize [formControl]="description"></textarea>
+    </div>
+  </div>
+  <br>
+  <br>
+  
+
+    <div class="example-button-row" style="display:flex" fxLayoutGap="25px">
+      <div>
+        <app-icons></app-icons>
+      </div>
+      <div> 
+        <button  mat-button (click)="onUpdate()">Close</button>
+       </div>
+    </div>
+  </div>
+  <!-- </mat-card> -->
+  </div>
+  </div>
+  

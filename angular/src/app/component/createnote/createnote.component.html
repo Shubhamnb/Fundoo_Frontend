@@ -1,0 +1,72 @@
+
+<div fxLayoutAlign="center center" class="noteComponent" >
+  <mat-card class="noteComponent1"  style="width: 500px;height: 2vh;" 
+  (click)="onOpen()" *ngIf="!open">
+    <input matInput placeholder="Take a Note">
+    <div fxLayoutAlign="end center" style="margin-top:-8%">
+    <button mat-icon-button>
+      <mat-icon matTooltip="check">check_box</mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon matTooltip="brush">brush</mat-icon>
+      </button>
+      <button mat-icon-button>
+          <mat-icon matTooltip="add image">image</mat-icon>
+        </button>
+      </div>
+  </mat-card>
+
+
+  <mat-card  class="noteComponent1" *ngIf="open" style="width: 500px;margin-top: 7%" >
+      <div fxLayout="column" fxLayoutGap="25px">
+        <div>
+          <input matInput placeholder="Title" [(ngModel)]="note.noteTitle">
+        </div>
+        <div class="fontSize">
+          <input matInput placeholder="Take a note...." [(ngModel)]="note.discription">
+        </div>
+        <div class="example-button-row" style="display:flex" fxLayoutGap="25px">
+        <div>
+          <app-icons></app-icons>
+        </div>
+        <!-- <div class="example-button-row" style="display:flex" fxLayoutGap="25px">
+          <div>
+            <mat-icon matTooltip="Remind me" >add_alert</mat-icon>
+          </div> 
+          <div>
+            <mat-icon matTooltip="Add people" >person_add</mat-icon>
+          </div> 
+          <div>
+            <mat-icon matTooltip="Add color" >palette</mat-icon>
+          </div>
+          <div>
+            <mat-icon matTooltip="Add image" >image_outline</mat-icon>
+          </div> 
+          <div>
+            <mat-icon matTooltip="Archive" >archive_outline</mat-icon>
+          </div> 
+          <div>
+            <mat-icon matTooltip="More" >more_vert</mat-icon>
+          </div>
+          <div>
+            <mat-icon matTooltip="undo" >undo</mat-icon>
+          </div>
+          <div>
+            <mat-icon matTooltip="redu" style="margin-right: 45px;">redo</mat-icon>
+          </div> -->
+          <div> 
+            <button  mat-button (click)="onClose()">Close</button>
+           </div>
+          </div>
+        
+      </div>
+  </mat-card>
+ 
+   
+    
+   
+</div>
+<div> 
+    <app-display> </app-display>
+ </div>
+  

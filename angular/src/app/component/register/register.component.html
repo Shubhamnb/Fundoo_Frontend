@@ -1,0 +1,49 @@
+<div class="main" fxLayout="row" fxLayoutAlign="center center"  >
+    <div  class="register">
+        <mat-card class="mat-card">
+                <div class="fundooNote" fxLayoutAlign="center center">
+                    <h2>FundooNotes</h2>
+                </div>
+                <div class="register" fxLayoutAlign="center center">
+                    <h3>Register</h3>
+                 </div>
+             <form [formGroup]="registerForm">
+                <div  fxLayout="column" fxLayoutAlign="center center">
+                <div> 
+                    <mat-form-field id="fname" appearance="outline">
+                      <mat-label>firstname</mat-label>
+                      <input matInput placeholder="firstName" formControlName="fname" [(ngModel)]="user.fname">
+                    </mat-form-field>
+                </div>   
+                <div>      
+                    <mat-form-field id="email" appearance="outline">
+                            <mat-label>email</mat-label>
+                            <input matInput placeholder="email" formControlName="email" [(ngModel)]="user.email"> 
+                          </mat-form-field>
+                </div>
+                <div>      
+                    <mat-form-field id="password" appearance="outline">
+                            <mat-label>password</mat-label>
+                            <input matInput placeholder="password" formControlName="password" [(ngModel)]="user.password">
+                          </mat-form-field>
+                </div>
+                <div>      
+                    <mat-form-field id="address" appearance="outline">
+                            <mat-label>address</mat-label>
+                            <input matInput placeholder="address" formControlName="address" [(ngModel)]="user.address">
+                          </mat-form-field>
+                </div>
+                    <div class = "space-between-button">
+                        <div class="example-button-row"> 
+                            <button mat-raised-button color="primary" (click)="register()">Register</button>
+                        </div>    
+                    </div>
+                    <!-- <div class="buttonRegister">
+                        <button mat-raised-button color="primary"  (click)="register()">Register</button>
+                        
+                     </div> -->
+             </div>
+                    </form>
+        </mat-card>
+    </div>
+</div>
